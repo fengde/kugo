@@ -4,7 +4,7 @@ func init() {
 	register(&HelpCommand{})
 	register(&NewCommand{})
 	register(&CheckCommand{})
-	register(&BuildCommand{})
+	// register(&BuildCommand{})
 }
 
 var commands = map[string]ICommand{}

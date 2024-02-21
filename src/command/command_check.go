@@ -1,5 +1,10 @@
 package command
 
+import (
+	"os"
+	"os/exec"
+)
+
 type CheckCommand struct{}
 
 func (self CheckCommand) Cmd() string {
@@ -7,10 +12,13 @@ func (self CheckCommand) Cmd() string {
 }
 
 func (self CheckCommand) Exec(args ...string) error {
-
+	cmd := exec.Command("golangci-lint", append([]string{"run"}, args...)...)
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	_ = cmd.Run()
 	return nil
 }
 
 func (self CheckCommand) Help() string {
-	return `kugo check: use golangcli-lint to check all go files of the dir and sub dir. (except vendor)`
+	return `kugo check: use golangcli-lint to check go code`
 }
