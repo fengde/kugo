@@ -1,4 +1,15 @@
 # kugo
+
+make coding faster with golang.
+
+### install
+```
+ git clone https://github.com/fengde/kugo
+ cd kugo
+ ./install.sh
+ ```
+
+### useage
 ```
 kugo build: build project. it will build executor to ./target/
 

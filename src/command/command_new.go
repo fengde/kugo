@@ -48,7 +48,12 @@ func (self NewCommand) Exec(args ...string) error {
 		return fmt.Errorf("please change the project name '%s'. it's a bad name, must start with lower char.", projname)
 	}
 
-	if err := filex.Copy(fmt.Sprintf("./template/new-%s/{{template}}", templ), projname); err != nil {
+	templatePath := fmt.Sprintf("./template/new-%s/{{template}}", templ)
+	if !filex.IsDirExist(templatePath) {
+		templatePath = path.Join("/usr/local/kugo", templatePath)
+	}
+
+	if err := filex.Copy(templatePath, projname); err != nil {
 		return err
 	}
 

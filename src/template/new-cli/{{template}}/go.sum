@@ -1,0 +1,4 @@
+github.com/fengde/gocommon v1.2.1 h1:QeTif21VGdsLj+RzgKtzdfs4SDxiRugZCl6AoAcBaX8=
+github.com/fengde/gocommon v1.2.1/go.mod h1:1VXhMK3LepvbcxblItKTnAcTpo+HsbvC2aLY6VvSNjQ=
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
