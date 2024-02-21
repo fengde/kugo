@@ -1,0 +1,19 @@
+Name: {{template}}-api
+Host: 0.0.0.0
+Port: 8888
+Mode: dev
+Log:
+  Mode: console
+  Path: ./log
+  Encoding: plain
+  Level: debug
+  KeepDays: 7
+  Rotation: daily
+  Stat: true
+Mysql:
+  Dsn:
+Redis:
+  Host: 127.0.0.1:6379
+  Type: node
+  Pass:
+  Tls: false

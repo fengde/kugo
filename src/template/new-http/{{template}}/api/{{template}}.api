@@ -1,0 +1,15 @@
+type Request {
+	Name string `path:"name,options=you|me"`
+}
+
+type Response {
+	Message string `json:"message"`
+}
+
+@server(
+    middleware: LogMiddleware
+)
+service {{template}}-api {
+	@handler HeathHandler
+	get /health(Request) returns (Response)
+}
