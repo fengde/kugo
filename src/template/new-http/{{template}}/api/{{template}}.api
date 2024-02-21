@@ -1,8 +1,6 @@
-type Request {
-	Name string `path:"name,options=you|me"`
-}
+type HealthRequest {}
 
-type Response {
+type HealthResponse {
 	Message string `json:"message"`
 }
 
@@ -11,5 +9,5 @@ type Response {
 )
 service {{template}}-api {
 	@handler HeathHandler
-	get /health(Request) returns (Response)
+	get /health(HealthRequest) returns (HealthResponse)
 }

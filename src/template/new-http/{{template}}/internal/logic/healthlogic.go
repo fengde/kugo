@@ -2,7 +2,6 @@ package logic
 
 import (
 	"context"
-	"errors"
 
 	"{{template}}/internal/svc"
 	"{{template}}/internal/types"
@@ -24,9 +23,9 @@ func NewHealthLogic(ctx context.Context, svcCtx *svc.ServiceContext) *HealthLogi
 	}
 }
 
-func (l *HealthLogic) Httptemplate(req *types.Request) (resp *types.Response, err error) {
+func (l *HealthLogic) Health(req *types.HealthRequest) (resp *types.HealthResponse, err error) {
 	// todo: add your logic here and delete this line
-	return &types.Response{
-		Message: "abc",
-	}, errors.New("wait??")
+	return &types.HealthResponse{
+		Message: "hello world",
+	}, nil
 }
